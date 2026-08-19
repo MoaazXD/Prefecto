@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- خلفية بتدرج شعاعي داكن -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1C2E"/>
+      <stop offset="100%" stop-color="#0A0B14"/>
+    </radialGradient>
+
+    <!-- تدرج حرف P بين البنفسجي والأزرق -->
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <!-- ظل ناعم للعمق -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#6366F1" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- الخلفية الحاضنة (Squircle) -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+
+  <!-- عنصر حرف P + فقاعة المحادثة -->
+  <g filter="url(#glow)">
+    <!-- مسار حرف P مع ذيل الفقاعة والفتحة الداخلية -->
+    <path fill="url(#pGrad)" fill-rule="evenodd" d="
+      M 160 110 
+      H 280 
+      C 346.27 110 400 163.73 400 230 
+      C 400 296.27 346.27 350 280 350 
+      H 220 
+      V 380 
+      C 220 395 205 405 190 398 
+      L 152 380 
+      C 142 375 136 365 136 353 
+      V 134 
+      C 136 120.75 146.75 110 160 110 
+      Z 
+      M 220 180 
+      V 280 
+      H 280 
+      C 307.61 280 330 257.61 330 230 
+      C 330 202.39 307.61 180 280 180 
+      H 220 
+      Z" />
+    
+    <!-- نقطة التنبيه المضيئة (مؤشر رسالة جديدة / لمسة Perfecto) -->
+    <circle cx="280" cy="230" r="16" fill="#38BDF8"/>
+  </g>
+</svg>
